@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "308C56522A27BF1C005C001E"
-               BuildableName = "REPLACEME.app"
-               BlueprintName = "REPLACEME (iOS)"
-               ReferencedContainer = "container:REPLACEME.xcodeproj">
+               BlueprintIdentifier = "308C56642A27BF1C005C001E"
+               BuildableName = "Incogmeeto.app"
+               BlueprintName = "Incogmeeto (macOS)"
+               ReferencedContainer = "container:Incogmeeto.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -43,10 +43,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "308C56522A27BF1C005C001E"
-            BuildableName = "REPLACEME.app"
-            BlueprintName = "REPLACEME (iOS)"
-            ReferencedContainer = "container:REPLACEME.xcodeproj">
+            BlueprintIdentifier = "308C56642A27BF1C005C001E"
+            BuildableName = "Incogmeeto.app"
+            BlueprintName = "Incogmeeto (macOS)"
+            ReferencedContainer = "container:Incogmeeto.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -60,10 +60,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "308C56522A27BF1C005C001E"
-            BuildableName = "REPLACEME.app"
-            BlueprintName = "REPLACEME (iOS)"
-            ReferencedContainer = "container:REPLACEME.xcodeproj">
+            BlueprintIdentifier = "308C56642A27BF1C005C001E"
+            BuildableName = "Incogmeeto.app"
+            BlueprintName = "Incogmeeto (macOS)"
+            ReferencedContainer = "container:Incogmeeto.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
