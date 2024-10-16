@@ -7,14 +7,8 @@
 
 import Foundation
 import SwiftUI
-#if os(iOS)
-import UIKit
-typealias PlatformImage = UIImage
-#endif
-#if os(macOS)
 import AppKit
 typealias PlatformImage = NSImage
-#endif
 
 struct AppIconView: View {
     private let size: CGFloat = 100
@@ -27,10 +21,6 @@ struct AppIconView: View {
     }
     
     private var image: Image {
-        #if os(iOS)
-        return Image(uiImage: appIcon)
-        #else
         return Image(nsImage: appIcon)
-        #endif
     }
 }
