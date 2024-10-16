@@ -1,5 +1,5 @@
 {
-  "name": "REPLACEME",
+  "name": "incogmeeto",
   "version": "1.0.0",
   "description": "",
   "main": "background.js",
@@ -11,8 +11,7 @@
     "build:firefox": "node scripts/firefox-build.js"
   },
   "keywords": [],
-  "author": "REPLACEME",
-  "license": "MIT",
+  "author": "nazariosoftwarellc",
   "devDependencies": {
     "@tsconfig/svelte": "^5.0.0",
     "@types/webextension-polyfill": "^0.10.0",

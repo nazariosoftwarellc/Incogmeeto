@@ -1,10 +1,10 @@
 {
   "extension_name": {
-    "message": "REPLACEME",
+    "message": "Incogmeeto",
     "description": "The display name for the extension."
   },
   "extension_description": {
-    "message": "REPLACEME",
+    "message": "Hide your view of yourself in Google Meet",
     "description": "Description of what the extension does."
   }
 }
