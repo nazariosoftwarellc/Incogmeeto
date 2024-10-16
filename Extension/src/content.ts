@@ -1,5 +1,3 @@
-console.log('hello');
-
 let interval: number;
 
 interval = setInterval(() => {
@@ -25,7 +23,6 @@ async function minimizeSelfView() {
   if (!minimizeButton) return;
   minimizeButton.click();
 
-  console.log('found buttons');
   clearInterval(interval);
 }
 
