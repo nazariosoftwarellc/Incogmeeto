@@ -48,7 +48,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @objc
     private func openHelpPage() {
-        let helpLink = URL(string: "REPLACEME")!
+        let helpLink = URL(string: "https://www.nazariosoftware.com/2024/10/16/get-help-with-incogmeeto.html")!
         NSWorkspace.shared.open(helpLink)
     }
 
