@@ -1,20 +1,34 @@
-import browser from 'webextension-polyfill';
-import { type BrowserMessageType, type ColorScheme } from './models';
+console.log('hello');
 
-browser.runtime.onMessage.addListener(message => {
-  console.log('got message', message);
-  switch (message.type as BrowserMessageType) {
-    case 'getColorScheme': {
-      return Promise.resolve(getColorScheme());
-    }
-  }
-});
+let interval: number;
 
-function getColorScheme() {
-  let scheme: ColorScheme = 'light';
-  const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-  if (darkModeMediaQuery.matches) {
-    scheme = 'dark';
-  }
-  return scheme;
+interval = setInterval(() => {
+  minimizeSelfView();
+}, 1000);
+
+async function minimizeSelfView() {
+  const menuButtonResults = document.querySelectorAll(
+    'button[aria-label="More options"]'
+  );
+  const menuButtons = Array.from(menuButtonResults) as HTMLButtonElement[];
+  if (menuButtons.length !== 2) return;
+
+  const minMenu = menuButtons[0];
+  minMenu.click();
+  await sleep(1000);
+
+  const listItemResults = document.querySelectorAll('li');
+  const listItems = Array.from(listItemResults) as HTMLLIElement[];
+  const minimizeButton = listItems.find(
+    listItem => listItem.textContent?.trim() === 'close_fullscreenMinimize'
+  );
+  if (!minimizeButton) return;
+  minimizeButton.click();
+
+  console.log('found buttons');
+  clearInterval(interval);
+}
+
+async function sleep(ms: number) {
+  return new Promise(resolve => setTimeout(resolve, ms));
 }

@@ -14,21 +14,16 @@
     "512": "images/app_icon_512px.png"
   },
 
-  "background": {
-    "service_worker": "dist/background.js"
-  },
-
   "host_permissions": [],
 
   "content_scripts": [
     {
       "js": ["dist/content.js"],
-      "matches": ["*://example.com/*"]
+      "matches": ["*://meet.google.com/*"]
     }
   ],
 
   "action": {
-    "default_popup": "public/popup.html",
     "default_icon": {
       "16": "images/toolbar_16px.png",
       "19": "images/toolbar_19px.png",
@@ -36,19 +31,6 @@
       "38": "images/toolbar_38px.png",
       "48": "images/toolbar_48px.png",
       "72": "images/toolbar_72px.png"
-    }
-  },
-
-  "permissions": ["storage"],
-
-  "options_ui": {
-    "page": "public/settings.html",
-    "open_in_tab": true
-  },
-
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "REPLACEME"
     }
   }
 }

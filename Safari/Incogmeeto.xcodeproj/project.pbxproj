@@ -14,7 +14,6 @@
 		30A8D0662A29469A00FD77A6 /* macOS Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30A8D0652A29469A00FD77A6 /* macOS Assets.xcassets */; };
 		30A8D0672A29469A00FD77A6 /* macOS Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30A8D0652A29469A00FD77A6 /* macOS Assets.xcassets */; };
 		30DD362B2A55BF1D00361103 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DD36292A55BF1D00361103 /* Views.swift */; };
-		30DD363A2A55C01F00361103 /* public in Resources */ = {isa = PBXBuildFile; fileRef = 30DD362D2A55C01E00361103 /* public */; };
 		30DD363E2A55C01F00361103 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 30DD362F2A55C01F00361103 /* images */; };
 		30DD36402A55C01F00361103 /* dist in Resources */ = {isa = PBXBuildFile; fileRef = 30DD36302A55C01F00361103 /* dist */; };
 		30DD36442A55C01F00361103 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 30DD36322A55C01F00361103 /* _locales */; };
@@ -59,7 +58,6 @@
 		308C56802A27BF1C005C001E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30A8D0652A29469A00FD77A6 /* macOS Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "macOS Assets.xcassets"; sourceTree = "<group>"; };
 		30DD36292A55BF1D00361103 /* Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
-		30DD362D2A55C01E00361103 /* public */ = {isa = PBXFileReference; lastKnownFileType = folder; name = public; path = ../../../Extension/public; sourceTree = "<group>"; };
 		30DD362F2A55C01F00361103 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = images; path = ../../../Extension/images; sourceTree = "<group>"; };
 		30DD36302A55C01F00361103 /* dist */ = {isa = PBXFileReference; lastKnownFileType = folder; name = dist; path = ../../../Extension/dist; sourceTree = "<group>"; };
 		30DD36322A55C01F00361103 /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; name = _locales; path = ../../../Extension/_locales; sourceTree = "<group>"; };
@@ -158,7 +156,6 @@
 				30DD36302A55C01F00361103 /* dist */,
 				30DD362F2A55C01F00361103 /* images */,
 				30DD36342A55C01F00361103 /* manifest.json */,
-				30DD362D2A55C01E00361103 /* public */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -260,7 +257,6 @@
 				30DD36482A55C01F00361103 /* manifest.json in Resources */,
 				30A8D0672A29469A00FD77A6 /* macOS Assets.xcassets in Resources */,
 				30DD36442A55C01F00361103 /* _locales in Resources */,
-				30DD363A2A55C01F00361103 /* public in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
