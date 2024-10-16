@@ -2,7 +2,7 @@
   "name": "incogmeeto",
   "version": "1.0.0",
   "description": "",
-  "main": "background.js",
+  "main": "content.js",
   "scripts": {
     "format": "prettier --write .",
     "build": "node scripts/build.js",
