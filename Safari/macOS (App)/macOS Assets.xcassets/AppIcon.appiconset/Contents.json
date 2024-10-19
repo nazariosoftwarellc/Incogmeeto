@@ -1,68 +1,68 @@
 {
   "images" : [
     {
-      "filename" : "mac-16.png",
+      "size" : "16x16",
       "idiom" : "mac",
-      "scale" : "1x",
-      "size" : "16x16"
+      "filename" : "output-16.png",
+      "scale" : "1x"
     },
     {
-      "filename" : "mac-32.png",
+      "size" : "16x16",
       "idiom" : "mac",
-      "scale" : "2x",
-      "size" : "16x16"
+      "filename" : "output-32.png",
+      "scale" : "2x"
     },
     {
-      "filename" : "mac-32.png",
+      "size" : "32x32",
       "idiom" : "mac",
-      "scale" : "1x",
-      "size" : "32x32"
+      "filename" : "output-32.png",
+      "scale" : "1x"
     },
     {
-      "filename" : "mac-64.png",
+      "size" : "32x32",
       "idiom" : "mac",
-      "scale" : "2x",
-      "size" : "32x32"
+      "filename" : "output-64.png",
+      "scale" : "2x"
     },
     {
-      "filename" : "mac-128.png",
+      "size" : "128x128",
       "idiom" : "mac",
-      "scale" : "1x",
-      "size" : "128x128"
+      "filename" : "output-128.png",
+      "scale" : "1x"
     },
     {
-      "filename" : "mac-256.png",
+      "size" : "128x128",
       "idiom" : "mac",
-      "scale" : "2x",
-      "size" : "128x128"
+      "filename" : "output-256.png",
+      "scale" : "2x"
     },
     {
-      "filename" : "mac-256.png",
+      "size" : "256x256",
       "idiom" : "mac",
-      "scale" : "1x",
-      "size" : "256x256"
+      "filename" : "output-256.png",
+      "scale" : "1x"
     },
     {
-      "filename" : "mac-512.png",
+      "size" : "256x256",
       "idiom" : "mac",
-      "scale" : "2x",
-      "size" : "256x256"
+      "filename" : "output-512.png",
+      "scale" : "2x"
     },
     {
-      "filename" : "mac-512.png",
+      "size" : "512x512",
       "idiom" : "mac",
-      "scale" : "1x",
-      "size" : "512x512"
+      "filename" : "output-512.png",
+      "scale" : "1x"
     },
     {
-      "filename" : "mac-1024.png",
+      "size" : "512x512",
       "idiom" : "mac",
-      "scale" : "2x",
-      "size" : "512x512"
+      "filename" : "output-1024.png",
+      "scale" : "2x"
     }
   ],
   "info" : {
-    "author" : "xcode",
-    "version" : 1
+    "version" : 1,
+    "author" : "xcode"
   }
 }
