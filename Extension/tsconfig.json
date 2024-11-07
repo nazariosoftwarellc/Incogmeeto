@@ -1,5 +1,4 @@
 {
-  "extends": "@tsconfig/svelte/tsconfig.json",
   "compilerOptions": {
     "target": "ES2016",
     "module": "ES2022",
@@ -11,7 +10,6 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "alwaysStrict": true,
-    "resolveJsonModule": true,
     "importsNotUsedAsValues": "remove",
     "jsx": "react"
   },
