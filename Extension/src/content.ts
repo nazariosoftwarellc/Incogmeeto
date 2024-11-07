@@ -15,16 +15,18 @@ async function main() {
 }
 
 function checkIfInCall(): boolean {
-  const leaveCallButton = document.querySelector(
-    'button[aria-label="Leave call"]'
-  ) as HTMLButtonElement | null;
+  const buttons = Array.from(document.querySelectorAll('button')) as HTMLButtonElement[];
+  const leaveCallButton = buttons.find(
+    button => button.textContent?.trim() === 'call_end'
+  );
   return Boolean(leaveCallButton);
 }
 
 async function minimizeSelfView() {
-  const menuButtons = Array.from(document.querySelectorAll(
-    'button[aria-label="More options"]'
-  )) as HTMLButtonElement[];
+  let buttons = Array.from(document.querySelectorAll('button')) as HTMLButtonElement[];
+  const menuButtons = buttons.filter(
+    button => button.textContent?.trim() === 'more_vert'
+  );
   if (menuButtons.length < 2) return;
 
   const selfViewMenu = menuButtons[menuButtons.length - 2];
@@ -45,9 +47,10 @@ async function minimizeSelfView() {
 
   await sleep(1000);
 
-  const closeButton = document.querySelector(
-    'button[aria-label="Close"]'
-  ) as HTMLButtonElement | null;
+  buttons = Array.from(document.querySelectorAll('button')) as HTMLButtonElement[];
+  const closeButton = buttons.find(
+    button => button.textContent?.trim() === 'close'
+  );
   if (closeButton) {
     closeButton.click();
   }
