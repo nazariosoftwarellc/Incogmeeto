@@ -1,18 +1,16 @@
-console.log('Content script loaded -------------');
-
 setInterval(() => {
   main();
 }, 1000);
 
-let closingSelf = false;
-let hiddenSelfInCurrentCall = false;
+let minimizingInProgress = false;
+let alreadyMinimizedSelfInCurrentCall = false;
 
 async function main() {
   const inCall = checkIfInCall();
-  if (inCall && !closingSelf && !hiddenSelfInCurrentCall) {
-    closingSelf = true
+  if (inCall && !minimizingInProgress && !alreadyMinimizedSelfInCurrentCall) {
+    minimizingInProgress = true
     await minimizeSelfView();
-    closingSelf = false;
+    minimizingInProgress = false;
   }
 }
 
@@ -40,9 +38,9 @@ async function minimizeSelfView() {
   );
   if (!minimizeButton) return;
   minimizeButton.click();
-  hiddenSelfInCurrentCall = true;
+  alreadyMinimizedSelfInCurrentCall = true;
   window.onbeforeunload = () => {
-    hiddenSelfInCurrentCall = false;
+    alreadyMinimizedSelfInCurrentCall = false;
   };
 
   await sleep(1000);
