@@ -1,29 +1,53 @@
-let interval: number;
+console.log('Content script loaded -------------');
 
-interval = setInterval(() => {
-  minimizeSelfView();
+setInterval(() => {
+  main();
 }, 1000);
 
-async function minimizeSelfView() {
-  const menuButtonResults = document.querySelectorAll(
-    'button[aria-label="More options"]'
-  );
-  const menuButtons = Array.from(menuButtonResults) as HTMLButtonElement[];
-  if (menuButtons.length !== 2) return;
+let closingSelf = false;
 
-  const minMenu = menuButtons[0];
-  minMenu.click();
+async function main() {
+  const inCall = checkIfInCall();
+  if (inCall && !closingSelf) {
+    closingSelf = true
+    await minimizeSelfView();
+    closingSelf = false;
+  }
+}
+
+function checkIfInCall(): boolean {
+  const leaveCallButton = document.querySelector(
+    'button[aria-label="Leave call"]'
+  ) as HTMLButtonElement | null;
+  return Boolean(leaveCallButton);
+}
+
+async function minimizeSelfView() {
+  const menuButtons = Array.from(document.querySelectorAll(
+    'button[aria-label="More options"]'
+  )) as HTMLButtonElement[];
+  if (menuButtons.length < 2) return;
+
+  const selfViewMenu = menuButtons[menuButtons.length - 2];
+  selfViewMenu.click();
+
   await sleep(1000);
 
-  const listItemResults = document.querySelectorAll('li');
-  const listItems = Array.from(listItemResults) as HTMLLIElement[];
+  const listItems = Array.from(document.querySelectorAll('li')) as HTMLLIElement[];
   const minimizeButton = listItems.find(
     listItem => listItem.textContent?.trim() === 'close_fullscreenMinimize'
   );
   if (!minimizeButton) return;
   minimizeButton.click();
 
-  clearInterval(interval);
+  await sleep(1000);
+
+  const closeButton = document.querySelector(
+    'button[aria-label="Close"]'
+  ) as HTMLButtonElement | null;
+  if (closeButton) {
+    closeButton.click();
+  }
 }
 
 async function sleep(ms: number) {
