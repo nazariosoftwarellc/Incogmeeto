@@ -8,14 +8,16 @@ let alreadyMinimizedSelfInCurrentCall = false;
 async function main() {
   const inCall = checkIfInCall();
   if (inCall && !minimizingInProgress && !alreadyMinimizedSelfInCurrentCall) {
-    minimizingInProgress = true
+    minimizingInProgress = true;
     await minimizeSelfView();
     minimizingInProgress = false;
   }
 }
 
 function checkIfInCall(): boolean {
-  const buttons = Array.from(document.querySelectorAll('button')) as HTMLButtonElement[];
+  const buttons = Array.from(
+    document.querySelectorAll('button')
+  ) as HTMLButtonElement[];
   const leaveCallButton = buttons.find(
     button => button.textContent?.trim() === 'call_end'
   );
@@ -23,7 +25,9 @@ function checkIfInCall(): boolean {
 }
 
 async function minimizeSelfView() {
-  let buttons = Array.from(document.querySelectorAll('button')) as HTMLButtonElement[];
+  let buttons = Array.from(
+    document.querySelectorAll('button')
+  ) as HTMLButtonElement[];
   const menuButtons = buttons.filter(
     button => button.textContent?.trim() === 'more_vert'
   );
@@ -34,7 +38,9 @@ async function minimizeSelfView() {
 
   await sleep(1000);
 
-  const listItems = Array.from(document.querySelectorAll('li')) as HTMLLIElement[];
+  const listItems = Array.from(
+    document.querySelectorAll('li')
+  ) as HTMLLIElement[];
   const minimizeButton = listItems.find(
     listItem => listItem.textContent?.trim() === 'close_fullscreenMinimize'
   );
@@ -47,7 +53,9 @@ async function minimizeSelfView() {
 
   await sleep(1000);
 
-  buttons = Array.from(document.querySelectorAll('button')) as HTMLButtonElement[];
+  buttons = Array.from(
+    document.querySelectorAll('button')
+  ) as HTMLButtonElement[];
   const closeButton = buttons.find(
     button => button.textContent?.trim() === 'close'
   );
