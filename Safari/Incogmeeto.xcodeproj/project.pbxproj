@@ -279,7 +279,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncd ../Extension\nnpm run build\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=\"$PATH:/opt/homebrew/bin\"\ncd ../Extension\nnpm run build\n";
 		};
 		308C56B62A27C662005C001E /* Build Extension (Production) */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -297,7 +297,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncd ../Extension\nnpm run build:prod\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=\"$PATH:/opt/homebrew/bin\"\ncd ../Extension\nnpm run build:prod\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
