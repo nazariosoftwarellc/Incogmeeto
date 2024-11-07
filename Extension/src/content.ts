@@ -5,10 +5,11 @@ setInterval(() => {
 }, 1000);
 
 let closingSelf = false;
+let hiddenSelfInCurrentCall = false;
 
 async function main() {
   const inCall = checkIfInCall();
-  if (inCall && !closingSelf) {
+  if (inCall && !closingSelf && !hiddenSelfInCurrentCall) {
     closingSelf = true
     await minimizeSelfView();
     closingSelf = false;
@@ -39,6 +40,10 @@ async function minimizeSelfView() {
   );
   if (!minimizeButton) return;
   minimizeButton.click();
+  hiddenSelfInCurrentCall = true;
+  window.onbeforeunload = () => {
+    hiddenSelfInCurrentCall = false;
+  };
 
   await sleep(1000);
 
