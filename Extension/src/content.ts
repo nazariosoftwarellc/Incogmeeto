@@ -7,7 +7,13 @@ let alreadyMinimizedSelfInCurrentCall = false;
 
 async function main() {
   const inCall = checkIfInCall();
-  if (inCall && !minimizingInProgress && !alreadyMinimizedSelfInCurrentCall) {
+  const moreThanOnePerson = moreThanOnePersonInCall();
+  if (
+    inCall &&
+    moreThanOnePerson &&
+    !minimizingInProgress &&
+    !alreadyMinimizedSelfInCurrentCall
+  ) {
     minimizingInProgress = true;
     await minimizeSelfView();
     minimizingInProgress = false;
@@ -22,6 +28,13 @@ function checkIfInCall(): boolean {
     button => button.textContent?.trim() === 'call_end'
   );
   return Boolean(leaveCallButton);
+}
+
+function moreThanOnePersonInCall(): boolean {
+  const personDiv = Array.from(
+    document.querySelectorAll('[data-participant-id]')
+  );
+  return personDiv.length > 1;
 }
 
 async function minimizeSelfView() {
