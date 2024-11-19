@@ -15,8 +15,31 @@ async function main() {
     !alreadyMinimizedSelfInCurrentCall
   ) {
     minimizingInProgress = true;
+    hidePopupMenus();
     await minimizeSelfView();
+    showPopupMenus();
     minimizingInProgress = false;
+  }
+}
+
+const customCssId = 'com.nazariosoftware.Incogmeeto-css';
+
+function hidePopupMenus() {
+  const head = document.head || document.getElementsByTagName('head')[0];
+  const style = document.createElement('style');
+  style.setAttribute('id', customCssId);
+  style.setAttribute('type', 'text/css');
+  style.textContent = `
+    ul[aria-label="More options"] {
+      opacity: 0 !important;
+    }
+  `;
+  head.appendChild(style);
+}
+function showPopupMenus() {
+  const style = document.getElementById(customCssId);
+  if (style) {
+    style.remove();
   }
 }
 
