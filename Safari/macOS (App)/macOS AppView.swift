@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SafariServices
+import NZSSystemExtensions
 
 struct AppView: View {
     
@@ -16,6 +17,8 @@ struct AppView: View {
             EnabledMessageView()
                 .padding(.vertical)
             SafariPrefsButton()
+            Divider()
+            NZSAppList(filteringAppNames: ["Incogmeeto"])
         }
     }
 }

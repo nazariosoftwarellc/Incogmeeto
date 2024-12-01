@@ -18,6 +18,7 @@
 		30DD36402A55C01F00361103 /* dist in Resources */ = {isa = PBXBuildFile; fileRef = 30DD36302A55C01F00361103 /* dist */; };
 		30DD36442A55C01F00361103 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 30DD36322A55C01F00361103 /* _locales */; };
 		30DD36482A55C01F00361103 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 30DD36342A55C01F00361103 /* manifest.json */; };
+		99AA42772CFD03850076E557 /* NZSSystemExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 99AA42762CFD03850076E557 /* NZSSystemExtensions */; };
 		99B503372A4CC7A2006397D1 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B503362A4CC7A2006397D1 /* main.swift */; };
 		99B503392A5224ED006397D1 /* macOS AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B503382A5224ED006397D1 /* macOS AppView.swift */; };
 		99B5033C2A52250E006397D1 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B5033A2A52250E006397D1 /* Models.swift */; };
@@ -75,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99AA42772CFD03850076E557 /* NZSSystemExtensions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +230,9 @@
 				Base,
 			);
 			mainGroup = 308C56362A27BF1A005C001E;
+			packageReferences = (
+				99AA42752CFD03850076E557 /* XCRemoteSwiftPackageReference "SystemExtensions" */,
+			);
 			productRefGroup = 308C56542A27BF1C005C001E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -611,6 +616,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		99AA42752CFD03850076E557 /* XCRemoteSwiftPackageReference "SystemExtensions" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:nazariosoftwarellc/SystemExtensions.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		99AA42762CFD03850076E557 /* NZSSystemExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 99AA42752CFD03850076E557 /* XCRemoteSwiftPackageReference "SystemExtensions" */;
+			productName = NZSSystemExtensions;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 308C56372A27BF1A005C001E /* Project object */;
 }

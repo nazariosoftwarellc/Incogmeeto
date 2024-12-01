@@ -1,0 +1,15 @@
+{
+  "originHash" : "b38b1187b833d5b42734a0ec1a78c62172df9bd3fb6de8e1ec52a3f82c0875ed",
+  "pins" : [
+    {
+      "identity" : "systemextensions",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:nazariosoftwarellc/SystemExtensions.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "5e38ccb0f2e0077a3c5332cdc39bcf83ad5daa24"
+      }
+    }
+  ],
+  "version" : 3
+}
