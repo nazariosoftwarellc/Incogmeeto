@@ -14,10 +14,12 @@ struct AppView: View {
     var body: some View {
         VStack {
             AppIconView()
+                .padding(.top)
             EnabledMessageView()
-                .padding(.vertical)
+//                .padding(.vertical)
             SafariPrefsButton()
             Divider()
+                .padding(.top)
             NZSAppList(filteringAppNames: ["Incogmeeto"])
         }
     }
