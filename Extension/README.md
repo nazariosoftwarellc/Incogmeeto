@@ -1,18 +1,5 @@
-# Incogmeeto
+# Incogmeeto Extension
 
-## Building and running locally
+This is a small TypeScript project that compiles into a bit of client-side JavaScript. This code automatically hides the view of yourself in the bottom right corner of a Google Meet call.
 
-Build scripts are tested on **Mac**. These will probably work on Linux and Windows Subsystem for Linux, but I have not tested them.
-
-- Make sure you have Node.js 19.7.0 or later installed
-- Open the folder containing this README
-- Run `npm install`
-- Run `npm run build`
-
-Continue the process with the steps listed below.
-
-### Firefox
-
-- Open Firefox's [debugging page](about:debugging#/runtime/this-firefox) (`about:debugging#/runtime/this-firefox`)
-- Click "Load Temporary Add-on..."
-- Navigate to this project's root and select `manifest.json`
+To build this project, open the app in Xcode and use the Run button. That will call the build scripts to compile this extension.
