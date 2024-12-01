@@ -1,6 +1,6 @@
 //
 //  SafariConnector.swift
-//  REPLACEME (macOS)
+//  Incogmeeto (macOS)
 //
 //  Created by Kyle Nazario on 7/2/23.
 //

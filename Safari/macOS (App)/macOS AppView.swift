@@ -1,6 +1,6 @@
 //
 //  AppView.swift
-//  REPLACEME (macOS)
+//  Incogmeeto (macOS)
 //
 //  Created by Kyle Nazario on 7/2/23.
 //
@@ -10,7 +10,6 @@ import SafariServices
 
 struct AppView: View {
     
-    private let appIcon = NSImage(named: "AppIcon")
     var body: some View {
         VStack {
             AppIconView()
@@ -48,7 +47,7 @@ struct SafariPrefsButton: View {
     private func openPrefs() {
         Task {
             await SafariConnector.openExtensionPrefs()
-            await NSApplication.shared.terminate(nil)
+            NSApplication.shared.terminate(nil)
         }
     }
 }

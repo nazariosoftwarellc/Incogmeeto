@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  macOS (App)
 //
-//  Created by tester on 5/31/23.
+//  Created by Kyle Nazario on 5/31/23.
 //
 
 import Cocoa
@@ -13,9 +13,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private var window: NSWindow!
 
     func applicationDidFinishLaunching(_ notification: Notification) {
-        // Override point for customization after application launch.
-        NSApplication.shared.helpMenu?.items.first?.action = #selector(openHelpPage)
-        
         let contentRect = NSRect(x: 0, y: 0, width: 400, height: 400)
         let styleMask: NSWindow.StyleMask = [.miniaturizable, .closable, .resizable, .titled]
         let backing = NSWindow.BackingStoreType.buffered
