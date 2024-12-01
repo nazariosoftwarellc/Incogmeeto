@@ -1,5 +1,7 @@
 # Incogmeeto
 
+![A diagram showing a cat on a Google Meet hiding its view of itself](https://github.com/nazariosoftwarellc/HideSelfSafari/blob/main/diagram.png?raw=true)
+
 Hide your view of yourself when joining a Google Meet call. Works automatically with no configuration needed.
 
 ## Features
@@ -9,4 +11,4 @@ Hide your view of yourself when joining a Google Meet call. Works automatically 
 
 ## Download
 
-Links coming soon!
+Get the latest version of Incogmeeto from the [releases page](https://github.com/nazariosoftwarellc/Incogmeeto/releases).
