@@ -7,6 +7,7 @@
 
 import Cocoa
 import SwiftUI
+import NZSSystemExtensions
 
 class AppDelegate: NSObject, NSApplicationDelegate {
     
@@ -34,6 +35,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         mainMenu.addItem(appMenuItem)
         let appMenu = NSMenu()
         appMenuItem.submenu = appMenu
+        appMenu.addItem(withTitle:"About \(APP_NAME)", action:#selector(openAboutPanel), keyEquivalent: "")
+        appMenu.addItem(NSMenuItem.separator())
         appMenu.addItem(withTitle:"Quit \(APP_NAME)", action:#selector(NSApplication.terminate), keyEquivalent: "q")
         
         let helpMenuItem = NSMenuItem()
@@ -47,6 +50,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private func openHelpPage() {
         let helpLink = URL(string: "https://www.nazariosoftware.com/2024/10/16/get-help-with-incogmeeto.html")!
         NSWorkspace.shared.open(helpLink)
+    }
+    
+    @objc
+    private func openAboutPanel() {
+        AboutAppButton.openAboutPanel()
     }
 
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
