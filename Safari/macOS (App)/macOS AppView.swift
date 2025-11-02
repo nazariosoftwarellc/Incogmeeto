@@ -16,11 +16,7 @@ struct AppView: View {
             AppIconView()
                 .padding(.top)
             EnabledMessageView()
-//                .padding(.vertical)
             SafariPrefsButton()
-            Divider()
-                .padding(.top)
-            NZSAppList(filteringAppNames: ["Incogmeeto"])
         }
     }
 }
