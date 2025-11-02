@@ -36,7 +36,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let appMenu = NSMenu()
         appMenuItem.submenu = appMenu
         appMenu.addItem(withTitle:"About \(APP_NAME)", action:#selector(openAboutPanel), keyEquivalent: "")
-        appMenu.addItem(NSMenuItem.separator())
+        appMenu.addItem(withTitle: "\(NZSMoreAppsButton.title)...", action: #selector(openMoreAppsPanel), keyEquivalent: "")
+        appMenu.addItem(.separator())
         appMenu.addItem(withTitle:"Quit \(APP_NAME)", action:#selector(NSApplication.terminate), keyEquivalent: "q")
         
         let helpMenuItem = NSMenuItem()
@@ -55,6 +56,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc
     private func openAboutPanel() {
         AboutAppButton.openAboutPanel()
+    }
+    
+    @objc
+    private func openMoreAppsPanel() {
+        NZSMoreAppsButton.openMoreAppsPanel(filteringAppNames: [APP_NAME])
     }
 
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
